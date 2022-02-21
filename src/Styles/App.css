@@ -78,3 +78,19 @@ select{
 padding: 3px 10px;
 outline: none;
 }
+
+@media(min-width:1920px){
+  div.amount{
+    margin: 7% 35% 0;
+    height: 20%;
+  }
+  div.currency{
+    flex-basis: 20%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+  button.calculator{
+  margin: 30px 35% 50px;
+   height: 50px;
+  }
+}
