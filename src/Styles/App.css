@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body{
@@ -19,78 +20,111 @@ h1.title{
 }
 div.form{
   display: flex;
-  justify-content: center;
-  flex-basis: 50%;
-  min-height: 40vh;
-  margin: 0 25%;
   flex-wrap: wrap;
+  justify-content: space-around;
+  flex-basis: 90%;
+  min-height: 40vh;
+  margin: 0 5%;
   border-radius: 20px 80px 20px 80px;
   background-color: rgb(16, 92, 192);
   color: white;
 }
 div.amount{
   display: flex;
-  flex-basis: 50%;
-  margin: 30px 25% 0;
-  height: 20%;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  margin-top: 30px;
+  height: 30px;
 }
 div.amount input{
   height: 30px;
-  margin: 0 20px;
+  width: 40%;
+  margin: 0 10px;
   border: 2px solid black;
   border-radius: 10px;
   padding-left: 20px;
 }
 div.amount p{
   line-height: 30px;
-  width: 100px;
 }
 div.currency{
-  flex-basis: 25%;
+  flex-basis: 40%;
 }
 div.currency p{
   margin-bottom: 5px;
 }
-button.calculator{
-  position: relative;
-  flex-basis: 30%;
-  margin: 50px 35%;
-  background-color: white;
-  border-radius: 10px;
-  line-height: 30px;
-  border: 2px solid orangered;
-  cursor: pointer;
-  transition: .3s;
-}
-button.calculator:hover{
-  background-color: orangered;
-  color: white;
-}
-
-div.resultsWrap{
-text-align: center;
-flex-basis: 70%;
-margin: 30px 15%;
-}
-select{
-  border: 2px solid #222;
-  border-radius: 5px;
+div.currency select{
+border: 2px solid #222;
+border-radius: 5px;
 padding: 3px 10px;
 outline: none;
+width: 90%;
+} 
+button.calculator{
+  flex-basis: 30%;
+  margin: 0 35%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+  transition: .3s;
+  border: 2px solid orangered;
 }
-
-@media(min-width:1920px){
+button.calculator:hover{
+  background-color:white;
+  color: orangered;
+}
+div.resultsWrap{
+  text-align: center;
+  flex-basis: 90%;
+  margin: 30px 5%;
+  }
+@media(min-width:600px){
   div.amount{
-    margin: 7% 35% 0;
-    height: 20%;
+    margin-top: 50px;
+  }
+}
+@media(orientation:landscape){
+  div.form{
+    flex-basis: 80%;
+    min-height: 65vh;
+    margin: 0 10%;
+  }
+  div.amount{
+    margin-top: 30px;
   }
   div.currency{
-    flex-basis: 20%;
-    margin-bottom: 5%;
-    margin-left: 5%;
+    flex-basis: 30%;
   }
-  button.calculator{
-  margin: 30px 35% 50px;
-   height: 50px;
+}
+
+@media(orientation:landscape) and (min-width:1024px){
+  div.form{
+    flex-basis: 60%;
+    min-height: 45vh;
+    margin: 0 20%;
+  }
+  div.amount{
+    margin-top: 50px;
+  }
+  div.amount input{
+    height: 40px;
+    width: 20%;
+  }
+}
+
+@media(orientation:landscape) and (min-width:1920px){
+  div.form{
+    flex-basis: 50%;
+    margin: 0 25%;
+    padding: 0 5%;
+  }
+  div.amount{
+    margin-top: 80px;
+  }
+  div.currency{
+    flex-basis: 30%;
   }
 }
